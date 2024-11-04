@@ -17,7 +17,7 @@ library(jpeg)
 library(grid)
 
 # Google Map API key
-api_key <- "AIzaSyDfhy4eHVMaP3nxFLkzgRWOoNpYkmYq1sg"
+api_key <- "YOUR_API_KEY"
 
 location <- c(23.09998960496676, 113.2941479085638)
 radius <- 3500
