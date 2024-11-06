@@ -125,9 +125,6 @@ CBD_point <- c(23.123519517518872, 113.31954468834963)
 BJroad_point <- c(23.129754286006246, 113.25826932462109)
 Xiadu_point <- c(23.10031126106761, 113.3028161836008)
 
-Qiuda_6_Zaiji <- c(23.102905819772484, 113.30702088703055)
-Gz_jiujia <- c(23.09624534273016, 113.27040400624733)
-
 # Calculate distances from the center point for each restaurant
 Yum_cha_restaurants <- Yum_cha_restaurants %>%
   mutate(
