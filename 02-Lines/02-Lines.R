@@ -157,6 +157,7 @@ img_final <- image_annotate(img_final,
                             location = paste0("+50+690"))
 
 # Load the garden city image
+# Source: https://www.pinterest.com/pin/282178732894559192/
 GC <- image_read("data/GARDEN CITIES.png") 
 # Resize overlay image if necessary
 GC_resize <- image_resize(GC, "350x350")
