@@ -98,7 +98,7 @@ img_final <- image_annotate(img, "Seagull Island",
                             gravity = "northeast",
                             location = "+50+50")
 
-interpretation <- "Seagull Island is an river island\nformed by the alluvial deposits of the Pearl River Delta.\nTraditional fishing villages (RED POLYGONS)\nare scattered across the island,\nadapted to the ebb and flow of the small rivers,\nwith a modest settlement capacity."
+interpretation <- "Seagull Island is a river island\nformed by the alluvial deposits of the Pearl River Delta.\nTraditional fishing villages (RED POLYGONS)\nare scattered across the island,\nadapted to the ebb and flow of the small rivers,\nwith a modest settlement capacity."
 img_final <- image_annotate(img_final, interpretation, 
                             size = 55, color = "#6B4226",
                             font = "serif bold",
