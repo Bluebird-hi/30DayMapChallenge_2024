@@ -12,7 +12,7 @@ library(ggplot2)
 library(dplyr)
 library(classInt)
 library(magick)
-setwd("E:/Fall/MUSA6310 Communication/HW4-30DayMapChallenge/30DayMapChallenge_2024/12-Time and Space")
+setwd("E:/Fall/MUSA6310 Communication/HW4-30DayMapChallenge/30DayMapChallenge_2024/08-HDX")
 
 
 #### Data ####
