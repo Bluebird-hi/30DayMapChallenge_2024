@@ -8,7 +8,7 @@ library(dplyr)
 library(magick)
 
 # Load API
-census_api_key("e62580f74ef222beadd9dd2fbaf48ff130b31c4a", overwrite = TRUE)
+census_api_key("YOUR_API_KEY", overwrite = TRUE)
 
 # Retrieve ACS 2022 data for the Hong Kong population in California
 # Assuming the variable `B04006_009` represents "Hong Kong" ancestry (check variables with load_variables())
@@ -42,11 +42,13 @@ plot <- ggplot(hk_population_df) +
   geom_sf(data = CA, fill = "white", color = "black", size = 2) +
   geom_hex(aes(x = lon, y = lat, fill = estimate), bins = 30) +
   scale_fill_viridis_c(option = "magma", name = "Hong Kong Pop") +
-  theme_void() +
+  theme_minimal() +
   theme(legend.position = c(.2,.16),
         plot.background = element_rect(fill = "#FFE7E7", color = NA),
         legend.title = element_text(size = 30),
-        legend.text = element_text(size = 26))+
+        legend.text = element_text(size = 26),
+        axis.title = element_blank(),
+        panel.grid.major = element_line(color = "grey80"))+
   stat_summary_hex(aes(x = lon, y = lat, z = estimate), fun = sum)
 
 ggsave(filename = "Outputs/map.png", plot = plot, height = 7, width = 5, units = "in", dpi = 300)
