@@ -86,7 +86,7 @@ saveWidget(map, "Outputs/mapdeck_map.html", selfcontained = TRUE)
 # Define the data for the legend
 legend_data <- data.frame(
   subtype = c("Commercial", "Residential", "Entertainment", "Education", 
-              "Civic", "Religious", "Transportation", "Other"),
+              "Civic", "Religious", "Transportation", "NA"),
   color = c("#FFA1F5E6", "#FEB941E6", "#FF6500E6", "#9EDE73E6", 
             "#FFF100E6", "#CDFFFCE6", "#86A7FCE6", "#B2A59BE6")
 )
@@ -94,14 +94,14 @@ legend_data <- data.frame(
 legend_plot <- ggplot(legend_data, aes(x = 1, y = subtype, fill = color)) +
   geom_tile() +
   scale_fill_identity() + # Use the exact colors provided
-  geom_text(aes(label = subtype), color = "black", size = 5, hjust = 0, nudge_x = 0.1) +
+  geom_text(aes(label = subtype), color = "black", size = 5, hjust = 1, nudge_x = 0.4) +
   labs(title = "Building Types") +
   theme_void() +
   theme(
-    legend.title = element_text(size = 18),
-    legend.text = element_text(size = 12)
+    legend.title = element_text(size = 30),
+    legend.text = element_text(size = 18)
   )
-ggsave("Outputs/legend.png", plot = legend_plot, units = "in", dpi = 300)
+ggsave("Outputs/legend.png", plot = legend_plot, units = "in", dpi = 300, width = 2, height = 3)
 
 
 #### Plot: combine ####
@@ -145,7 +145,7 @@ legend <- image_read("Outputs/legend.png")
 legend_resized <- image_scale(legend, "400x200")
 
 # Combine the images
-combined_image <- image_composite(img_final, legend_resized, operator = "over", gravity = "southeast", offset = "+180+120")
+combined_image <- image_composite(img_final, legend_resized, operator = "over", gravity = "southeast", offset = "+180+150")
 
 
 image_write(combined_image, path = "Outputs/29-Luming-Overture.png")
