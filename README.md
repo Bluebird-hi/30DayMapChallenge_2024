@@ -1,2 +1,1 @@
-# 30DayMapChallenge_2024
- 30DayMapChallenge_2024
+# Luming's 30DayMapChallenge in 2024
